@@ -7,3 +7,76 @@ $Grayish-blue: #7b879d;
 $Dark-blue: rgb(31, 50, 81);
 $font-paragraph: 15px;
 $font-text-g: 'Outfit', sans-seri;
+
+body{
+  font-family: $font-text-g;
+  background: $Light-gray;
+}
+.card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  padding: 20px 20px 40px;
+  max-width: 340px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 30px rgba($color: #000000, $alpha: .2);
+  .qr-code{
+    text-align: center;
+    .img-qr-code{
+      max-width: 300px;
+      border-radius: 10px;
+    }
+  }
+  .card-text{
+    text-align: center;
+    padding-top: 26px;
+    max-width: 100%;
+    width: 265px;
+    margin: 0 auto;
+    .card-title{
+      font-weight: 700;
+      font-size: 23px;
+      line-height: 28px;
+      margin-bottom: 15px;
+      color: $Dark-blue;
+    }
+    .card-description{
+      font-size: $font-paragraph;
+      color: $Grayish-blue;
+      line-height: 20px;
+    }
+  }
+}
+footer{
+  display: flex;
+  justify-content: center;
+  .attribution{
+    position: absolute;
+    top: 90%;
+    color: $Dark-blue;
+    font-weight: 700;
+    font-size: 20px;
+    a{
+      text-decoration: none;
+      color: #2b7dfa;
+      position: relative;
+      &::before{
+        content: '';
+        width: 50%;
+        height: 3px;
+        top: 100%;
+        position: absolute;
+        background-color: #3684fe;
+        transition: all .4s linear;
+      }
+      &:hover::before{
+        width: 100%;
+        height: 2px;
+      }
+    }
+  }
+}
