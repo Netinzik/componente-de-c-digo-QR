@@ -80,3 +80,17 @@ footer{
     }
   }
 }
+@media only screen and (max-width: 560px){
+  footer{
+    text-align: center;
+    .attribution{
+      max-width: 65vw;
+      top: 92%;
+      a{
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
+}
